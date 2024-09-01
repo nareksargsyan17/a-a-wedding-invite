@@ -277,8 +277,8 @@ body {
   max-width: 180px;
   display: flex;
   flex-direction: column;
-  justify-content: center;
-  gap: 80px;
+  justify-content: start;
+  gap: 100px;
 }
 
 .plan-block {
@@ -289,9 +289,9 @@ body {
   align-items: center;
 }
 
-/*.plan-block :nth-child(2) {*/
-/*  padding-top: 60px;*/
-/*}*/
+.section-2 > .plan-block:first-child {
+  padding-top: 100px;
+}
 
 .plan-block > img {
   max-width: 120px;

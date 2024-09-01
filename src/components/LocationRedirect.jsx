@@ -16,7 +16,7 @@ const LocationRedirect = () => {
               <div className="location">
                   <div className="monastery"/>
                   <h2>{t('monastery')}</h2>
-                  <button onClick={() => handleRedirect('https://yandex.ru/maps/-/CDfVZ83P')}>
+                  <button onClick={() => handleRedirect('https://yandex.ru/maps/-/CDw5NY5Y')}>
                       {t('showMap')}
                   </button>
               </div>

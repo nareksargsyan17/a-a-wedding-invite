@@ -73,12 +73,11 @@ export const Plan = () => {
                         <span className="plan-time">14:00</span>
                         <span className="plan-text">{t('ceremony')}</span>
                     </div>
-                    <div className={`plan-block ${isVisibleEndBlock ? 'visible' : ''}`} ref={planEndBlock}>
-                        <img src="/verj.png" alt="wedding ceremony"/>
-                        <span className="plan-time">23:00</span>
-                        <span className="plan-text">{t('end')}</span>
+                    <div className={`plan-block ${isVisibleCakeBlock ? 'visible' : ''}`} ref={planCakeBlock}>
+                        <img src="/tort.png" alt="wedding ceremony"/>
+                        <span className="plan-time">21:30</span>
+                        <span className="plan-text">{t('cake')}</span>
                     </div>
-                    <div className={'plan-block'}></div>
                 </div>
                 <div className="plan-wall" ref={planWall}/>
                 <div className="plan-section section-2">
@@ -88,10 +87,10 @@ export const Plan = () => {
                         <span className="plan-time">16:00</span>
                         <span className="plan-text">{t('hall')}</span>
                     </div>
-                    <div className={`plan-block ${isVisibleCakeBlock ? 'visible' : ''}`} ref={planCakeBlock}>
-                        <img src="/tort.png" alt="wedding ceremony"/>
-                        <span className="plan-time">21:30</span>
-                        <span className="plan-text">{t('cake')}</span>
+                    <div className={`plan-block ${isVisibleEndBlock ? 'visible' : ''}`} ref={planEndBlock}>
+                        <img src="/verj.png" alt="wedding ceremony"/>
+                        <span className="plan-time">23:00</span>
+                        <span className="plan-text">{t('end')}</span>
                     </div>
                 </div>
             </div>

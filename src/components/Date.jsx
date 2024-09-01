@@ -73,9 +73,9 @@ export const DateTime = () => {
           </div>
       </div>
       <div className="names">
-          <span>{t('narek')}</span>
+          <span>{t('arman')}</span>
           <span>♡</span>
-          <span>{t('alvard')}</span>
+          <span>{t('anjela')}</span>
       </div>
       <span>© Created by Narek Sargsyan</span>
   </div>

@@ -5,9 +5,9 @@ export const Loader = () => {
   return (
       <div className="loader-block">
         <div>
-            <span className="animated-span-left-to-right">{t('n')}</span>
+            <span className="animated-span-left-to-right">{t('a1')}</span>
             <span className="animated-span-appear">{t('&')}</span>
-            <span className="animated-span-right-to-left">{t('a')}</span>
+            <span className="animated-span-right-to-left">{t('a2')}</span>
         </div>
       </div>
   )

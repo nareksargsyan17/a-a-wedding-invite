@@ -4,29 +4,29 @@ import { useTranslation } from 'react-i18next'
 
 export function VideoPlayer () {
   const { t } = useTranslation()
-  const videoRef = useRef(null)
+  const audioRef = useRef(null)
   const soundRef = useRef(null)
   const [soundIcon, setSoundIcon] = useState(true)
-
-  useEffect(() => {
-    const video = videoRef.current
-
-    video.play()
-  }, [])
+  const [muted, setMuted] = useState(true)
 
   useEffect(() => {
     setTimeout(() => {
       setSoundIcon(!soundIcon)
     }, 2000)
-
-    // return clearInterval(changeIcon)
   }, [soundIcon])
 
   return (
       <div className="video-container">
           <LanguageSelector/>
+          <audio
+              ref={audioRef}
+              src="/audio.mp3"
+              loop
+              muted={muted}
+              preload="metadata"
+              controls={false}
+              type="audio/mpeg"></audio>
           <video
-              ref={videoRef}
               src="/video.mp4"
               autoPlay
               loop
@@ -38,11 +38,16 @@ export function VideoPlayer () {
               className="video"
               type="video/mp4"
           ></video>
-          <p className="video-span-1">{t('nar')}</p>
+          <p className="video-span-1">{t('arm')}</p>
            <p className="video-span-3" ref={soundRef} onClick={() => {
-             videoRef.current.muted = !videoRef.current.muted
+             setMuted(!muted)
+             if (muted) {
+               audioRef.current.play()
+             } else {
+               audioRef.current.pause()
+             }
            }}>{soundIcon ? '♡' : '♪'}</p>
-          <p className="video-span-2">{t('av')}</p>
+          <p className="video-span-2">{t('anj')}</p>
       </div>
   )
 }
