@@ -1,0 +1,680 @@
+body {
+  margin: 0;
+  font-family: "Dancing Script", "Noto Sans Armenian", cursive, sans-serif;
+  /*font-family: Brush Script MT, Brush Script Std, cursive;*/
+  overflow-x: hidden !important;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+
+.loader-block {
+  width: 100vw;
+  height: 100vh;
+  background-color: rgba(182, 181, 181, 0.55);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  overflow: hidden;
+}
+
+.animated-span-left-to-right {
+  display: inline-block;
+  opacity: 0;
+  animation: slideLeftToRight 6s forwards;
+  font-size: 15vw;
+  font-family: Brush Script MT, Brush Script Std, cursive;
+  color: white;
+}
+
+.animated-span-right-to-left {
+  display: inline-block;
+  opacity: 0;
+  animation: slideRightToLeft 6s forwards;
+  font-size: 15vw;
+  font-family: Brush Script MT, Brush Script Std, cursive;
+  color: white;
+}
+
+.animated-span-appear {
+  display: inline-block;
+  opacity: 0;
+  transform: translateX(-100%);
+  animation: slideAppear 6s ease-in-out;
+  font-size: 10vw;
+  font-family: Brush Script MT, Brush Script Std, cursive;
+  color: white;
+}
+
+@keyframes slideLeftToRight {
+  0% {
+    opacity: 0;
+    transform: translateX(-200%);
+  }
+  75% {
+    opacity: 1;
+    transform: translateX(-15%);
+  }
+  100% {
+    opacity: 0.3;
+    transform: translateX(-15%);
+  }
+}
+
+@keyframes slideRightToLeft {
+  0% {
+    opacity: 0;
+    transform: translateX(200%) translateY(30%);
+  }
+  75% {
+    opacity: 1;
+    transform: translateX(15%) translateY(30%);
+  }
+  100% {
+    opacity: 0.3;
+    transform: translateX(15%) translateY(30%);
+  }
+}
+
+@keyframes slideAppear {
+  0% {
+    opacity: 0;
+    transform: translateY(15%);
+  }
+  75% {
+    opacity: 1;
+    transform: translateY(15%);
+  }
+  100% {
+    opacity: 0.3;
+    transform: translateY(15%);
+  }
+}
+
+.video-container {
+  width: 100vw;
+  height: 100vh;
+  overflow: hidden;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  gap: 10px;
+  flex-grow: 1;
+  position: relative;
+}
+
+.video {
+  width: 100vw;
+  height: 100vh;
+  object-fit: cover; /* Optional: Cover the entire container */
+  object-position: 50% 60%;
+  position: absolute;
+}
+
+.video-span-1 {
+  margin: 0;
+  font-size: 10vw;
+  /*font-family: 'Pacifico', cursive;*/
+  /*font-family: Brush Script MT, Brush Script Std, cursive;*/
+  font-weight: normal;
+  color: white;
+  z-index: 80;
+}
+
+.video-span-2 {
+  margin: 0;
+  font-size: 10vw;
+  /*font-family: Brush Script MT, Brush Script Std, cursive;*/
+  font-weight: normal;
+  color: white;
+  z-index: 80;
+}
+
+@keyframes pulse {
+  0% {transform: scale(1); font-weight: 600}
+  25% {transform: scale(1.1); font-weight: 800}
+  50% {transform: scale(1.4); font-weight: 1200}
+  75% {transform: scale(1.1); font-weight: 800}
+  100% {transform: scale(1); font-weight: 600}
+}
+
+.video-span-3 {
+  font-size: 7vw;
+  height: 7vw;
+  /*font-family: Brush Script MT, Brush Script Std, cursive;*/
+  font-weight: bolder;
+  color: white;
+  z-index: 80;
+  animation:pulse 1s infinite;
+  transition: opacity 0.1s ease;
+  cursor: pointer;
+  -webkit-tap-highlight-color: transparent;
+  margin: 0 0 40px 0;
+}
+
+
+
+/* Add this to your CSS file or component styles */
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+.fade-in-span {
+  bottom: 20px;
+  right: 20px;
+  background: #ccc;
+  padding: 10px;
+  border-radius: 5px;
+  animation: fadeIn 0.5s ease forwards;
+  opacity: 0;
+}
+
+.animation-container {
+  overflow: hidden;
+  min-height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  max-width: 100vw;
+}
+
+.animated-text {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 40px;
+  text-align: center;
+  flex-direction: column;
+  height: 100%;
+}
+
+.guests {
+  transition: opacity 2s, transform2s;
+  opacity: 0;
+  font-size: 100px;
+  font-weight: lighter;
+}
+
+
+.guests-info-text {
+  transition: opacity 2s, transform2s;
+  opacity: 0;
+  font-size: 40px;
+  text-wrap: normal;
+  font-weight: lighter;
+}
+
+.date {
+  transition: opacity 2s, transform2s;
+  opacity: 0;
+  font-size: 100px;
+}
+
+.weekday {
+  transition: opacity 2s, transform2s;
+  opacity: 0;
+  font-size: 40px;
+}
+
+.plan {
+  transition: opacity 2s, transform2s;
+  opacity: 0;
+  font-size: 100px;
+  font-weight: lighter;
+}
+
+.photo-container {
+  width: 100vw;
+  height: 110vh;
+  display: flex;
+  justify-content: center;
+}
+
+.photo {
+  width: 50vw;
+  height: 100%;
+  background-size: cover;
+  background-position: 50% 10%;
+  background-repeat: no-repeat;
+  background-image: url("../public/photo.jpg");
+  filter: grayscale(100%);
+}
+
+.plan-container {
+  padding: 50px 0 30px 0;
+  overflow: hidden;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-direction: column;
+  max-width: 100vw;
+  text-align: center;
+  gap: 40px;
+  font-weight: lighter;
+}
+
+.plan-info-block {
+  width: 100vw;
+  display: flex;
+  justify-content: center;
+  gap: 30px;
+}
+
+.plan-wall {
+  border: 2px solid rgba(0, 0, 0, 0.62);
+  margin-top: 20px;
+  height: 0
+}
+
+.plan-section {
+  max-width: 180px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  gap: 80px;
+}
+
+.plan-block {
+  transition: opacity 2s, transform2s;
+  opacity: 0;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+/*.plan-block :nth-child(2) {*/
+/*  padding-top: 60px;*/
+/*}*/
+
+.plan-block > img {
+  max-width: 120px;
+}
+
+.plan-time {
+  font-size: 60px;
+}
+
+.plan-text {
+  font-size: 20px;
+}
+
+.date-container {
+  overflow: hidden;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  max-width: 100vw;
+  text-align: center;
+  gap: 80px;
+  font-weight: lighter;
+  min-height: 100vh;
+
+}
+
+.date-text {
+  transition: opacity 2s, transform2s;
+  opacity: 0;
+  font-size: 100px;
+  font-weight: lighter;
+}
+
+.date-time-container {
+  transition: opacity 2s, transform2s;
+  opacity: 0;
+  display: flex;
+  align-items: start;
+  gap: 20px;
+  color: rgba(41, 40, 40, 0.7);
+}
+
+.date-time-block {
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+}
+
+.time-number {
+  font-size: 60px;
+  font-weight: lighter;
+}
+
+.time-text {
+  font-size: 15px;
+  font-weight: lighter;
+}
+
+.point {
+  font-size: 40px;
+  margin-top: 10px;
+}
+
+.names {
+  display: flex;
+  flex-direction: column;
+  font-size: 50px;
+  font-family: Brush Script MT, Brush Script Std, cursive;
+  font-weight: lighter;
+  color: rgba(0, 0, 0, 0.83);
+  justify-content: center;
+}
+
+/* LocationRedirect.css */
+.location-container {
+  max-width: 100%;
+  /*background-color: #b0b0b0;*/
+  text-align: center;
+  margin-top: 50px;
+  min-height: 80vh;
+  color: #333;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  padding-top: 50px;
+  padding-bottom: 50px;
+  gap: 80px;
+}
+
+.location {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 30px;
+}
+
+.wedding-loc {
+  width: 150px;
+  height: 150px;
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-image: url("../public/restaurant.png");
+}
+
+.monastery {
+  width: 450px;
+  height: 350px;
+  background-size: cover;
+  background-position: 50% 10%;
+  background-repeat: no-repeat;
+  background-image: url("../public/monastry.png");
+  filter: grayscale(100%);
+}
+
+.location-container h1 {
+  font-size: 60px;
+  margin: 0;
+}
+
+.location-container h2 {
+  font-size: 50px;
+  margin: 0;
+}
+
+.location-container button {
+  font-size: 16px;
+  padding: 10px 20px;
+  border: 0.5px solid #333;
+  border-radius: 25px;
+  background-color: transparent;
+  color: #333;
+  cursor: pointer;
+}
+
+.location-container button:hover {
+  background-color: #ddd;
+}
+
+.vodiapicker {
+  display: none;
+}
+
+#a {
+  padding-left: 0;
+}
+
+#a img, .btn-select img {
+  width: 22px;
+}
+
+#a li {
+  list-style: none;
+  display: flex;
+  align-items: center;
+  padding: 0 8px 0 8px;
+  cursor: pointer;
+}
+
+#a li:hover {
+  background-color: #c6c6c6;
+}
+
+#a li img {
+  margin: 5px;
+}
+
+.btn-select > li > img {
+  margin: 5px;
+
+}
+
+#a li span, .btn-select li span {
+  margin-left: 10px;
+}
+
+.b {
+  display: none;
+  width: 100%;
+  max-width: 350px;
+  box-shadow: 0 6px 12px rgba(0, 0, 0, .175);
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  background-color: transparent;
+  margin-top: -2px;
+  box-sizing: border-box;
+}
+
+.open {
+  display: block !important;
+}
+
+.btn-select {
+  margin-top: 10px;
+  width: 80px;
+  height: 34px;
+  border-radius: 5px;
+  background-color: transparent;
+  border: 1px solid #ccc;
+  color: white;
+  padding: 0;
+  font-size: 12px;
+}
+
+.btn-select li {
+  list-style: none;
+  float: left;
+  display: flex;
+  align-items: center;
+  padding: 0 8px 0 8px;
+  cursor: pointer;
+}
+
+.btn-select:hover li {
+  margin-left: 0;
+}
+
+.btn-select:hover {
+  background-color: #c6c6c6;
+  border: 1px solid transparent;
+  box-shadow: inset 0 0 0 1px #ccc;
+}
+
+.btn-select:focus {
+  outline: none;
+}
+
+.lang-select {
+  right: 25px;
+  top: 0;
+  position: absolute;
+  z-index: 5555;
+  font-family: sans-serif;
+  color: white;
+  font-size: 12px;
+  width: 80px;
+}
+
+.visible {
+  opacity: 1;
+}
+
+
+
+
+@media only screen and (max-width: 768px) {
+  .guests {
+    font-size: 80px;
+  }
+
+  .guests-info-text {
+    font-size: 30px;
+  }
+
+  .date {
+    font-size: 80px;
+  }
+
+  .weekday {
+    font-size: 30px;
+  }
+
+  .photo {
+    width: 60vw;
+  }
+
+  .plan {
+    font-size: 80px;
+  }
+
+  .plan-block > img {
+    max-width: 110px;
+  }
+
+  .plan-time {
+    font-size: 50px;
+  }
+
+  .plan-text {
+    font-size: 18px;
+  }
+
+  .date-text {
+    font-size: 80px;
+  }
+
+  .time-number {
+    font-size: 50px;
+  }
+
+  .time-text {
+    font-size: 12px;
+  }
+
+  .location-container h1 {
+    font-size: 40px;
+  }
+
+  .location-container h2 {
+    font-size: 30px;
+  }
+
+
+  .monastery {
+    width: 350px;
+    height: 250px;
+  }
+}
+
+/* Media queries for even smaller screens */
+@media only screen and (max-width: 480px) {
+  .video-span-3 {
+    margin: 0 0 20px 0;
+  }
+
+  .guests {
+    font-size: 45px;
+  }
+
+  .guests-info-text {
+    font-size: 25px;
+  }
+
+  .date {
+    font-size: 60px;
+  }
+
+  .weekday {
+    font-size: 27px;
+  }
+
+  .photo {
+    width: 90vw;
+  }
+
+  .plan {
+    font-size: 55px;
+  }
+
+  .plan-block > img {
+    max-width: 100px;
+  }
+
+  .plan-time {
+    font-size: 40px;
+  }
+
+  .plan-text {
+    font-size: 15px;
+  }
+
+  .plan-info-block {
+    gap: 15px
+  }
+
+  .date-text {
+    font-size: 60px;
+  }
+
+  .time-number {
+    font-size: 40px;
+  }
+
+  .time-text {
+    font-size: 11px;
+  }
+
+  .point {
+    margin-top: 5px;
+    font-size: 30px;
+  }
+
+  .location-container h1 {
+    font-size: 40px;
+  }
+
+  .location-container h2 {
+    font-size: 30px;
+  }
+
+  .monastery {
+    width: 300px;
+    height: 250px;
+  }
+}
